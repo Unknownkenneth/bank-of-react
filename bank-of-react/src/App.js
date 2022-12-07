@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+// import { render } from '@testing-library/react';
 //import AccountBalance from './components/AccountBalance';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './components/Home';
@@ -7,6 +8,8 @@ import Login from './components/Login';
 import Debits from './components/Debits';
 import Credits from './components/Credits';
 import axios from "axios"
+import './App.css'
+import AccountBalance from './components/AccountBalance';
 //import './components/styles.css'
 
 
@@ -105,10 +108,11 @@ class App extends Component {
 
     return (
         <Router basename="/bank-of-react">
+        {/* // <Router> */}
           <div>
           <Switch>
             <Route exact path="/" render={HomeComponent}/>
-            <Route to="/userProfile" render={UserProfileComponent}/>
+            <Route exact path ="/userProfile" render={UserProfileComponent}/>
             <Route exact path="/login" render={LogInComponent}/>
             <Route exact path="/debits" render={DebitsComponent}/>
             <Route exact path="/credits" render={CreditsComponent}/>
