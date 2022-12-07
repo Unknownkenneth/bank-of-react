@@ -40,8 +40,8 @@ class App extends Component {
     let debits = this.state.debits;
     let credits = this.state.credits;
     if (!this.state.fetchedInitialData) {
-      debits = (await axios.get("https://moj-api.herokuapp.com/debits")).data;
-      credits = (await axios.get("https://moj-api.herokuapp.com/credits")).data;
+      debits = (await axios.get("https://johnnylaicode.github.io/api/debits.json")).data;
+      credits = (await axios.get("https://johnnylaicode.github.io/api/credits.json")).data;
       this.setState({ fetchedInitialData: true });
     }
 
